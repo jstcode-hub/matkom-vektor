@@ -18,22 +18,6 @@ def calculate_unit_normal_vector(A, B, C):
 
     return unit_normal_vector
 
-def calculate_surface_area(A, B, C):
-    # Menghitung dua vektor pada bidang segitiga
-    u = B - A
-    v = C - A
-
-    # Menghitung vektor normal
-    normal_vector = np.cross(u, v)
-
-    # Menghitung magnitudo vektor normal
-    magnitude = np.linalg.norm(normal_vector)
-
-    # Menghitung luas permukaan segitiga
-    surface_area = 0.5 * magnitude
-
-    return surface_area
-
 # Mendefinisikan titik-titik segitiga
 A = np.array([1, 1, 1])
 B = np.array([2, 4, 1])
@@ -41,9 +25,6 @@ C = np.array([3, 2, 2])
 
 # Menghitung vektor normal satuan
 unit_normal_vector = calculate_unit_normal_vector(A, B, C)
-
-# Menghitung luas permukaan segitiga
-surface_area = calculate_surface_area(A, B, C)
 
 # Plotting segitiga dan vektor normal satuan
 fig = plt.figure(figsize=(8, 8))
@@ -63,8 +44,7 @@ ax.set_zlabel('Sumbu Z')
 ax.legend()
 
 # Menampilkan plot
-plt.title('Vektor Normal Satuan dan Luas Permukaan Segitiga')
+plt.title('Vektor Normal Satuan Segitiga')
 plt.show()
 
 print("Vektor Normal Satuan:", unit_normal_vector)
-print("Luas Permukaan Segitiga:", surface_area)
