@@ -26,6 +26,8 @@ C = np.array([3, 2, 2])
 # Menghitung luas permukaan segitiga
 surface_area = calculate_surface_area(A, B, C)
 
+print("Luas Permukaan Segitiga:", surface_area)
+
 # Plotting segitiga
 fig = plt.figure(figsize=(8, 8))
 ax = fig.add_subplot(111, projection='3d')
@@ -41,5 +43,3 @@ ax.legend()
 # Menampilkan plot
 plt.title('Luas Permukaan Segitiga')
 plt.show()
-
-print("Luas Permukaan Segitiga:", surface_area)
